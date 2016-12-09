@@ -414,7 +414,7 @@ class Wechat{
         $signature = $_GET["signature"];
         $timestamp = $_GET["timestamp"];
         $nonce = $_GET["nonce"];
-		$token = TOKEN;
+		$token =$this->_token;
 		$tmpArr = array($token, $timestamp, $nonce);
         sort($tmpArr, SORT_STRING);
 		$tmpStr = implode( $tmpArr );
